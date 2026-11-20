@@ -2,7 +2,7 @@
 
 > **Học viên:** Chu Quang Linh · **MSSV:** 2A202603809 · **Lớp:** K5-L3B
 > **Cách chạy:** `python src/main.py --part 2|3|4` (từ gốc repo) → `outputs/*.json` → `python scripts/grade.py --submission-dir . --out outputs/grade_report.json`
-> **Ghi chú model:** Red / Red Advance dùng Gemini (`gemini-3.5-flash`). Blue chạy với `BLUE_LLM=gemini` (`gemini-3.8-flash`) vì tầng free của OpenRouter bị giới hạn tốc độ; bỏ biến này thì Blue dùng OpenRouter `liquid/lfm-3-1.7b:free` như mặc định của lab.
+> **Ghi chú model:** Red / Red Advance dùng Gemini (`gemini-3.5-flash`). Blue dùng OpenRouter `liquid/lfm-3-1.7b:free` (khoá cứng của lab) với `OPENROUTER_API_KEY` trong `.env` của người chạy; `outputs/results.json` được sinh bằng cấu hình này. `src/assignment/pipeline.py` có tuỳ chọn `BLUE_LLM=gemini` (mặc định tắt) cho trường hợp tầng free của OpenRouter bị giới hạn tốc độ.
 
 > 👤 **Hình thức:** bài tập **cá nhân** (1 người / 1 MSSV).  
 > 🎯 **Mục tiêu:** đóng vai **Blue Team** để học cách xây Guardrails phòng thủ, rồi đóng vai **Red Team** để tấn công agent **Red** hoặc **Red Advance**.  
